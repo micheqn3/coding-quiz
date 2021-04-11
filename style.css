@@ -1,0 +1,110 @@
+* {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden; /* Prevents the page from scrolling */
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    display: inline;
+    background-color: pink; 
+    width: 100%;
+    padding: 60px 50px;
+    top: 0;
+    position: fixed;
+}
+
+h2 {
+    float: right;
+}
+
+footer { /* sticky footer */
+    background-color: pink; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    padding: 23px 50px; 
+    text-align: center;
+}
+
+a {
+    color: black
+}
+
+h2,
+a,
+footer p,
+span {
+    background-color: pink; 
+}
+
+#main-description {
+    margin: 5%;
+    line-height: 30px;
+    text-transform: bold;
+}
+
+#main-page {
+    text-align: center;
+    margin-top: 15%;
+    margin-bottom: 3%;
+  }
+
+#start-game-button {
+    padding: 10px 20px;
+    margin-top: 5%;
+}
+
+#answer-choices button {
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 10px 20px;
+}
+
+#submitInitialsButton {
+    margin-left: 1%;
+}
+
+#clearButton {
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 20px;
+
+}
+
+.title {  /* Main page title */
+    font-size: 35px;
+    letter-spacing: 0.1em;
+}
+
+.high-scores-title {
+    text-align: center;
+    margin-top: 12%;
+    font-size: 35px;
+    letter-spacing: .2em;
+    margin-bottom: 10%;
+}
+
+.results-title {
+    font-size: 22px;
+    line-height: 50px;
+}
+
+.high-scores li { /* Initials and scores */
+    margin: 3%;
+    font-size: 20px;
+}
+
+
+
+     
+
+
+
