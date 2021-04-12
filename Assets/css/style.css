@@ -56,8 +56,11 @@ span {
   }
 
 #start-game-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin-top: 5%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
 }
 
 #answer-choices button {
@@ -65,6 +68,8 @@ span {
     margin: auto;
     margin-bottom: 2%;
     padding: 10px 20px;
+    background-color: black;
+    color: white;
 }
 
 #submitInitialsButton {
