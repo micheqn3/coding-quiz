@@ -89,7 +89,6 @@ function showQuestions() { // Will start showing the questions
     } else {
         clearInterval(totalTime); // Stop the timer
         timeLeft.text("0"); // Set it back to zero
-        //storeScore(points);  Store the points into local storage
         finishedGame(points);
     }
 };
@@ -105,12 +104,7 @@ function compareAnswers(userChoice, correctAnswer) { // This will compare each a
         showQuestions();
     }
 };
-/*
-function storeScore(points) { 
-    var totalScore = localStorage.setItem("score", points);
-};
 
-*/
 function finishedGame(points) {  // Asks the user to enter their initials to record their score in local storage
     mainPage.html("");
     answerChoices.html("");
@@ -134,7 +128,6 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
 
     submitButton.on("click", function() {
         initials = $("#input-text").val();
-        //localStorage.setItem("initials", initials);
         if (initials === null) {
             console.log("Nothing was typed in.");
         } else {
