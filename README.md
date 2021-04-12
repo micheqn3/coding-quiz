@@ -11,6 +11,6 @@ https://micheqn3.github.io/uci-unit4-hmwk/
 
 #### Screenshot of deployed application 
 
-![Screenshot](/Assets/coding-quiz-screenshot2.png)
+![Screenshot](/Assets/coding-screenshot.png)
 
 
