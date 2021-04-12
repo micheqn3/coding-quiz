@@ -97,12 +97,11 @@ function compareAnswers(userChoice, correctAnswer) { // This will compare each a
     questionNumber++; // Goes to the next question
     if (userChoice === correctAnswer) {
         points++; // Add points if the answer is correct
-        showQuestions();
 
     } else if (userChoice != correctAnswer) {
         secondsLeft -= timePenalized; // If the answer is wrong, 10 seconds will be taken from the timer
-        showQuestions();
     }
+    showQuestions();
 };
 
 function finishedGame(points) {  // Asks the user to enter their initials to record their score in local storage
@@ -126,17 +125,17 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
     footer.html(""); // Clears the footer
     footer.html("<a href = 'index.html'>PLAY GAME AGAIN</a>"); // Gives the user a choice to play again
 
-    submitButton.on("click", function() {
+    submitButton.on("click", function() { // When the user clicks submit to submit their initials 
         initials = $("#input-text").val();
-        if (initials === null) {
+        if (initials === null) { // Validation for if nothing is typed in 
             console.log("Nothing was typed in.");
         } else {
-            var scoreObject = {
+            var scoreObject = { // Stores the initials and points into an object
                 "initials": initials,
                 "score": points
             }
         }
-        var allScores = localStorage.getItem("allScores");
+        var allScores = localStorage.getItem("allScores"); // Retrieves the scores from local storage 
         if (allScores === null) {
             allScores = [];
 
@@ -145,11 +144,9 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
 
         }
         allScores.push(scoreObject);
-        var newScore = JSON.stringify(allScores);
+        var newScore = JSON.stringify(allScores); // Stores the object as a string
         localStorage.setItem("allScores", newScore);
-        console.log(localStorage.getItem("allScores"));
-
-        window.location.replace("highScores.html"); 
+        window.location.replace("highScores.html"); // Replaces the screen with high scores page 
     })
 };
 
