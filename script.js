@@ -156,7 +156,7 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
         localStorage.setItem("allScores", newScore);
         console.log(localStorage.getItem("allScores"));
 
-        window.location.replace("./highScores.html"); 
+        window.location.replace("highScores.html"); 
     })
 };
 
