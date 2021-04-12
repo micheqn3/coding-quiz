@@ -2,6 +2,7 @@
     background-color: white;
     margin: 0;
     padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 body {
@@ -61,6 +62,11 @@ span {
     background-color: black;
     color: white;
     font-size: 18px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease-in-out; /* Styles the button with a transition */
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #answer-choices button {
@@ -70,6 +76,11 @@ span {
     padding: 10px 20px;
     background-color: black;
     color: white;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #answer-choices p {
@@ -79,6 +90,14 @@ span {
 
 #submitInitialsButton {
     margin-left: 1%;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 #clearButton {
@@ -89,7 +108,15 @@ span {
     background-color: black;
     color: white;
     padding: 10px 20px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 
+#input-text {
+    margin-top: 5%;
 }
 
 .title {  /* Main page title */
@@ -115,6 +142,15 @@ span {
     font-size: 20px;
 }
 
+#answer-choices button:hover, /* Changes color on hover for these buttons */
+#start-game-button:hover,
+#submitInitialsButton:hover,
+#clearButton:hover 
+{
+    background-color: #ffffff;
+    color: pink;
+    border-color: pink;
+}
 
 
      
