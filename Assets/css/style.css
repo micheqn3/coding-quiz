@@ -72,6 +72,11 @@ span {
     color: white;
 }
 
+#answer-choices p {
+    text-align: center;
+    font-size: 20px;
+}
+
 #submitInitialsButton {
     margin-left: 1%;
 }
@@ -81,6 +86,9 @@ span {
     margin: auto;
     margin-top: 3%;
     font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
 
 }
 

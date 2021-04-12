@@ -1,7 +1,6 @@
 var startButton = $("#start-game-button"); // Targets the start button
 var mainPage = $("#main-page"); // Main page of the html
 var answerChoices = $("#answer-choices") // Location for answer choices 
-var allScores = $("all-scores"); // Targets the scores
 var footer = $("#footer"); // Targets the footer
 var timeLeft = $("#time-left"); // Time left span
 var totalTime = 0; // Will hold all of the seconds including penalties
@@ -81,7 +80,7 @@ function showQuestions() { // Will start showing the questions
         });
         mainPage.append(h1); // Adds the question to the HTML
         answerChoices.on("click", function(e) { // Listen for a click on the button
-            $(this).off("click"); // stops event from bubbling
+            $(this).off("click"); // Stops event from bubbling
             var target = e.target;
             userChoice = target.textContent; // Store the target choice in userChoice
             compareAnswers(userChoice, correctAnswer); // Calls the function to compare
@@ -96,12 +95,22 @@ function showQuestions() { // Will start showing the questions
 function compareAnswers(userChoice, correctAnswer) { // This will compare each answer 
     questionNumber++; // Goes to the next question
     if (userChoice === correctAnswer) {
+        var p = $("<p>"); 
+        p.text("Correct!");
+        answerChoices.append(p); // Show answer feedback 
         points++; // Add points if the answer is correct
 
     } else if (userChoice != correctAnswer) {
+        var p = $("<p>"); 
+        p.text("Wrong!");
+        answerChoices.append(p); // Show answer feedback 
         secondsLeft -= timePenalized; // If the answer is wrong, 10 seconds will be taken from the timer
     }
+    setTimeout(function (){ // Show next question after showing answer feedback for 1 second
+
     showQuestions();
+      
+      }, 1000); // Waits 1 second before showing next question
 };
 
 function finishedGame(points) {  // Asks the user to enter their initials to record their score in local storage
