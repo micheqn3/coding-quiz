@@ -6,7 +6,7 @@ Then, they get an option to record their score at the end of the game in a high 
 
 #### Link to deployed application
 
-https://micheqn3.github.io/uci-unit-4-hmwk/
+https://micheqn3.github.io/uci-unit4-hmwk/
 
 
 #### Screenshot of deployed application 
