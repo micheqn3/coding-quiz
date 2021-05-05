@@ -161,3 +161,7 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
 
 startButton.on("click", startTimer); // starts timer when button is clicked 
 
+
+$(document).ready(function(){ // Initializes side nav
+    $('.sidenav').sidenav();
+  });
