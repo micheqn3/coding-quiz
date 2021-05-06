@@ -40,7 +40,7 @@ footer a {
     margin-bottom: 3%;
   }
 
-#start-game-button {
+#styled-button {
     padding: 10px 30px;
     margin-top: 5%;
     background-color: gray;
@@ -137,12 +137,13 @@ footer a {
 }
 
 .back-text {
-    text-decoration: none;
     color: black;
+    padding: 2%;
+
 }
 
 #answer-choices button:hover, /* Changes color on hover for these buttons and a tags */
-#start-game-button:hover,
+#styled-button:hover,
 #submitInitialsButton:hover,
 #clearButton:hover {
     background-color: #ffffff;

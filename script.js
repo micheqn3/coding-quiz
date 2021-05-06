@@ -1,18 +1,18 @@
-var startButton = $("#start-game-button"); // Targets the start button
-var mainPage = $("#main-page"); // Main page of the html
-var answerChoices = $("#answer-choices") // Location for answer choices 
-var footer = $("#footer"); // Targets the footer
-var timeLeft = $("#time-left"); // Time left span
-var totalTime = 0; // Will hold all of the seconds including penalties
-var timePenalized = 5; // Time deducted for wrong answers 
-var secondsLeft = 60; // Starts the timer at 60 seconds
-var questionNumber = 1; // Start with the first question
-var correctAnswer; // Stores each correct answer
-var userChoice; // Stores the user's clicked choice
-var points = 0; // Start with 0 points
-var initials; // Will save the user's initials
+let startButton = $("#styled-button"); // Targets the start button
+let mainPage = $("#main-page"); // Main page of the html
+let answerChoices = $("#answer-choices") // Location for answer choices 
+let footer = $("#footer"); // Targets the footer
+let timeLeft = $("#time-left"); // Time left span
+let totalTime = 0; // Will hold all of the seconds including penalties
+let timePenalized = 5; // Time deducted for wrong answers 
+let secondsLeft = 60; // Starts the timer at 60 seconds
+let questionNumber = 1; // Start with the first question
+let correctAnswer; // Stores each correct answer
+let userChoice; // Stores the user's clicked choice
+let points = 0; // Start with 0 points
+let initials; // Will save the user's initials
 
-var questions =  { // Object that holds the questions and answers
+let questions =  { // Object that holds the questions and answers
 1 : {
     "Q": "Inside which element do we put the Javascript src?",
     "Answers": ["<javascript>", "<js>", "<script>", "<scripting>"],
@@ -68,20 +68,20 @@ function showQuestions() { // Will start showing the questions
     if (questionNumber <= 7) { // Won't run if out of questions
         mainPage.html(""); // Clear the title of the main section
         answerChoices.html(""); // Clear the answer choices
-        var writeQuestion = questions[questionNumber].Q; // Create a variable holding the question
-        var h1 = $("<h1>"); // Create h1 element and store it in h1 variable
+        let writeQuestion = questions[questionNumber].Q; // Create a variable holding the question
+        let h1 = $("<h1>"); // Create h1 element and store it in h1 variable
         h1.text(writeQuestion); // Fill h1 element with the question
         correctAnswer = questions[questionNumber].Correct; // Stores the correct answer 
     
         questions[questionNumber].Answers.forEach(function(each) { // Creates a button for each answer 
-            var answerButton = $("<button>");
+            let answerButton = $("<button>");
             answerButton.text(each);
             answerChoices.append(answerButton); // Adds each button after the question
         });
         mainPage.append(h1); // Adds the question to the HTML
         answerChoices.on("click", function(e) { // Listen for a click on the button
             $(this).off("click"); // Stops event from bubbling
-            var target = e.target;
+            let target = e.target;
             userChoice = target.textContent; // Store the target choice in userChoice
             compareAnswers(userChoice, correctAnswer); // Calls the function to compare
         });
@@ -95,13 +95,13 @@ function showQuestions() { // Will start showing the questions
 function compareAnswers(userChoice, correctAnswer) { // This will compare each answer 
     questionNumber++; // Goes to the next question
     if (userChoice === correctAnswer) {
-        var p = $("<p>"); 
+        let p = $("<p>"); 
         p.text("Correct!");
         answerChoices.append(p); // Show answer feedback 
         points++; // Add points if the answer is correct
 
     } else if (userChoice != correctAnswer) {
-        var p = $("<p>"); 
+        let p = $("<p>"); 
         p.text("Wrong!");
         answerChoices.append(p); // Show answer feedback 
         secondsLeft -= timePenalized; // If the answer is wrong, 10 seconds will be taken from the timer
@@ -116,15 +116,15 @@ function compareAnswers(userChoice, correctAnswer) { // This will compare each a
 function finishedGame(points) {  // Asks the user to enter their initials to record their score in local storage
     mainPage.html("");
     answerChoices.html("");
-    var resultsTitle = mainPage.html("<h1>RESULTS</h1>");
+    let resultsTitle = mainPage.html("<h1>RESULTS</h1>");
     resultsTitle.attr("class", "results-title"); // Added a class to style it
-    var p = $("<p>");
+    let p = $("<p>");
     p.text(`You scored: ${points} points out of 7.`);
-    var p2 = $("<p>");
+    let p2 = $("<p>");
     p2.text("Want to save your score? Enter your initials here: ");
-    var input = $("<input>");
+    let input = $("<input>");
     input.attr("id", "input-text");
-    var submitButton = $("<button>");
+    let submitButton = $("<button>");
     submitButton.attr("id", "submitInitialsButton");
     submitButton.text("Submit");
     resultsTitle.append(p);
@@ -139,12 +139,12 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
         if (initials === null) { // Validation for if nothing is typed in 
             console.log("Nothing was typed in.");
         } else {
-            var scoreObject = { // Stores the initials and points into an object
+            let scoreObject = { // Stores the initials and points into an object
                 "initials": initials,
                 "score": points
             }
         }
-        var allScores = localStorage.getItem("allScores"); // Retrieves the scores from local storage 
+        let allScores = localStorage.getItem("allScores"); // Retrieves the scores from local storage 
         if (allScores === null) {
             allScores = [];
 
@@ -153,7 +153,7 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
 
         }
         allScores.push(scoreObject);
-        var newScore = JSON.stringify(allScores); // Stores the object as a string
+        let newScore = JSON.stringify(allScores); // Stores the object as a string
         localStorage.setItem("allScores", newScore);
         window.location.replace("highScores.html"); // Replaces the screen with high scores page 
     })
