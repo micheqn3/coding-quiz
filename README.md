@@ -24,7 +24,7 @@ and creates a clear button for the user to clear all above entries as well as cl
 
 ### Link to deployed application
 
-https://micheqn3.github.io/uci-unit4-hmwk-coding-quiz/
+https://micheqn3.github.io/coding-quiz/
 
 
 ### Screenshot of deployed application 
