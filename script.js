@@ -139,7 +139,7 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
         if (initials === null) { // Validation for if nothing is typed in 
             console.log("Nothing was typed in.");
         } else {
-            let scoreObject = { // Stores the initials and points into an object
+            var scoreObject = { // Stores the initials and points into an object
                 "initials": initials,
                 "score": points
             }
@@ -150,7 +150,6 @@ function finishedGame(points) {  // Asks the user to enter their initials to rec
 
         } else {
             allScores = JSON.parse(allScores);
-
         }
         allScores.push(scoreObject);
         let newScore = JSON.stringify(allScores); // Stores the object as a string
