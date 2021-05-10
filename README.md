@@ -1,4 +1,4 @@
-## UCI Homework #4 Coding Quiz
+## Coding Quiz
 
 This repository contains a coding quiz. The user starts the game by pressing the start button and the quiz starts to countdown from 60 seconds.
 The user will receive one point for each question they answer correctly and receive a 5 second penalty for answering wrong.
