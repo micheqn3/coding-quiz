@@ -152,7 +152,7 @@ footer a {
 }
 
      
-@media only screen and (max-width: 320px) { /* Hides the nav title on iphont  */
+@media only screen and (max-width: 320px) { /* iphone 5/se */
     .quiz-title {
         display: none;
     }
@@ -160,7 +160,84 @@ footer a {
     .title {
         font-size: 22px;
     } 
+
+    .question,
+    .results-title {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
 }   
+
+@media only screen and (max-width: 375px)  { /* iphone 6, 7, 8 */
+    .quiz-title {
+        display: none;
+    }
+
+    .question {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .question,
+    .results-title {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media only screen and (max-width: 414px) { /* iphone 6, 7, 8 plus */
+    .question,
+    .results-title {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .quiz-title {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 2000px)  { /* Larger screens */
+    .title {
+        font-size: 80px;
+    }
+
+    #main-description {
+        font-size: 30px;
+    }
+
+    .question {
+        font-size: 40px;
+        padding-bottom: 3%;
+    }
+
+    footer {
+        font-size: 35px;
+    }
+
+    .results-title {
+        font-size: 40px;
+    }
+
+    .high-scores-title {
+        font-size: 40px;
+    }
+
+    #answer-choices button {
+        display: block;
+        margin: auto;
+        margin-bottom: 2%;
+        padding: 20px 60px;
+        background-color: gray;
+        color: white;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        font-size: 40px;
+    }
+ 
+}
 
 
 

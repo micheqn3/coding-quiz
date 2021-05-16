@@ -70,6 +70,7 @@ function showQuestions() { // Will start showing the questions
         answerChoices.html(""); // Clear the answer choices
         let writeQuestion = questions[questionNumber].Q; // Create a variable holding the question
         let h1 = $("<h1>"); // Create h1 element and store it in h1 variable
+        h1.addClass("question")
         h1.text(writeQuestion); // Fill h1 element with the question
         correctAnswer = questions[questionNumber].Correct; // Stores the correct answer 
     
