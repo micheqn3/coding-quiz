@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Coding Quiz
 
 This repository contains a coding quiz. The user starts the game by pressing the start button and the quiz starts to countdown from 60 seconds.
@@ -21,7 +22,12 @@ and creates a clear button for the user to clear all above entries as well as cl
 
   - reset.css- This will force every browser to have all its styles reset to null.
 
+### Technologies/Languages used: 
 
+  - JavaScript
+  - jQuery
+  - Materialize
+ 
 ### Link to deployed application
 
 https://micheqn3.github.io/coding-quiz/
@@ -30,4 +36,9 @@ https://micheqn3.github.io/coding-quiz/
 ### Screenshot of deployed application 
 
 ![Screenshot](/Assets/screenshot-quiz.png)
+
+### License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+MIT 
+
 
