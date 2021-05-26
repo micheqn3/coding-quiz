@@ -36,7 +36,7 @@ footer a {
 
 #main-page {
     text-align: center;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-bottom: 3%;
   }
 
@@ -112,7 +112,7 @@ footer a {
 
 .high-scores-title {
     text-align: center;
-    margin-top: 12%;
+    margin-top: 7%;
     font-size: 35px;
     letter-spacing: .2em;
     margin-bottom: 10%;
@@ -134,12 +134,6 @@ footer a {
 
 .sidenav li {
     margin: 10%;
-}
-
-.back-text {
-    color: black;
-    padding: 2%;
-
 }
 
 #answer-choices button:hover, /* Changes color on hover for these buttons and a tags */

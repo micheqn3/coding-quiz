@@ -25,4 +25,8 @@ if (allScores !== null) {
 };
 }
 
+$(document).ready(function(){ // Initializes side nav
+    $('.sidenav').sidenav();
+});
+
 showScores(); // Start the function on page load 
